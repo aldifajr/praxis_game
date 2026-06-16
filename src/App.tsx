@@ -5,6 +5,7 @@ import BoardGameMenuV2 from './pages/BoardGameMenuV2';
 import HomePageSetting from './pages/HomePageSetting';
 import JoinRequestPage from './pages/JoinRequestPage';
 import LeaderboardServerPage from './pages/LeaderboardServerPage';
+import LoadingGamePage from "./pages/LoadingGamePage";
 import LeaderboardServerEmptyPage from './pages/LeaderboardServerEmptyPage';
 
 type ScreenDefinition = {
@@ -102,6 +103,7 @@ export default function App() {
       <Route path="/join-request" element={<JoinRequestPage />} />
       <Route path="/leaderboard/server" element={<LeaderboardServerPage />} />
       <Route path="/leaderboard/server-empty" element={<LeaderboardServerEmptyPage />} />
+      <Route path="/loading-game" element={<LoadingGamePage />} />
       {screens
         .filter(
           (s) =>
@@ -111,7 +113,8 @@ export default function App() {
             s.path !== '/home/settings' &&
             s.path !== '/join-request' &&
             s.path !== '/leaderboard/server' &&
-            s.path !== '/leaderboard/server-empty',
+            s.path !== '/leaderboard/server-empty' &&
+            s.path !== '/loading-game',
         )
         .map((screen) => (
           <Route key={screen.path} path={screen.path} element={<ScreenPlaceholder screen={screen} />} />
