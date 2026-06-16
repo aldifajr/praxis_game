@@ -1,5 +1,6 @@
 import { Link, Navigate, Route, Routes } from 'react-router-dom';
 import CreateRoomPrepareEmpty from './pages/CreateRoomPrepareEmpty';
+import BoardGameMenuV2 from './pages/BoardGameMenuV2';
 
 type ScreenDefinition = {
   path: string;
@@ -93,6 +94,7 @@ export default function App() {
       {screens.map((screen) => (
         <Route key={screen.path} path={screen.path} element={<ScreenPlaceholder screen={screen} />} />
       ))}
+      <Route path="/board-game/menu-v2" element={<BoardGameMenuV2 />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
