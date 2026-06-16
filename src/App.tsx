@@ -91,10 +91,12 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/start/create-room/prepare-empty" element={<CreateRoomPrepareEmpty />} />
-      {screens.map((screen) => (
-        <Route key={screen.path} path={screen.path} element={<ScreenPlaceholder screen={screen} />} />
-      ))}
       <Route path="/board-game/menu-v2" element={<BoardGameMenuV2 />} />
+      {screens
+        .filter((s) => s.path !== '/start/create-room/prepare-empty' && s.path !== '/board-game/menu-v2')
+        .map((screen) => (
+          <Route key={screen.path} path={screen.path} element={<ScreenPlaceholder screen={screen} />} />
+        ))}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
