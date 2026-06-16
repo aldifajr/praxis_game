@@ -22,7 +22,7 @@ function CloseXIcon() {
   );
 }
 
-function PersonIcon({ size = 24, color = "currentColor" }: { size?: number; color?: string }) {
+function PersonIcon({ size = 24, color = 'currentColor' }: { size?: number; color?: string }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
       <path

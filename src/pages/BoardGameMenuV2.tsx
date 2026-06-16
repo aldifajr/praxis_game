@@ -10,7 +10,12 @@ export default function BoardGameMenuV2() {
         <div className="bgmv2-topbar-left">
           <button className="bgmv2-topbar-btn" aria-label="Menu" onClick={() => navigate(-1)}>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <path d="M4 6h16M4 12h16M4 18h16" stroke="#2B2B2B" strokeWidth="2" strokeLinecap="round" />
+              <path
+                d="M4 6h16M4 12h16M4 18h16"
+                stroke="#2B2B2B"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
             </svg>
           </button>
           <div className="bgmv2-topbar-tabs">
@@ -175,7 +180,10 @@ export default function BoardGameMenuV2() {
           <div className="bgmv2-leaderboard-panel">
             <div className="bgmv2-panel-header bgmv2-panel-header--red">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="white" />
+                <path
+                  d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                  fill="white"
+                />
               </svg>
               <span>Leaderboard</span>
             </div>
@@ -212,7 +220,10 @@ export default function BoardGameMenuV2() {
           <div className="bgmv2-chat-panel">
             <div className="bgmv2-panel-header bgmv2-panel-header--red">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.2 8.38 8.38 0 0 1-3.8-.9L3 21l1.4-5.6A8.38 8.38 0 0 1 3.5 11.5a8.5 8.5 0 0 1 4.2-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="white" />
+                <path
+                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.2 8.38 8.38 0 0 1-3.8-.9L3 21l1.4-5.6A8.38 8.38 0 0 1 3.5 11.5a8.5 8.5 0 0 1 4.2-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+                  fill="white"
+                />
               </svg>
               <span>Chat</span>
             </div>
@@ -256,7 +267,10 @@ export default function BoardGameMenuV2() {
         </button>
         <button className="bgmv2-action-btn bgmv2-action-btn--red">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="white" />
+            <path
+              d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+              fill="white"
+            />
           </svg>
           Rank
         </button>
@@ -270,7 +284,12 @@ export default function BoardGameMenuV2() {
         <button className="bgmv2-action-btn bgmv2-action-btn--red">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
             <circle cx="12" cy="12" r="3" fill="white" />
-            <path d="M12 1v6m0 6v6m4.22-10.22l-4.24 4.24M7.76 7.76l4.24 4.24M23 12h-6m-6 0H1m16.22 4.22l-4.24-4.24M7.76 16.24l4.24-4.24" stroke="white" strokeWidth="2" strokeLinecap="round" />
+            <path
+              d="M12 1v6m0 6v6m4.22-10.22l-4.24 4.24M7.76 7.76l4.24 4.24M23 12h-6m-6 0H1m16.22 4.22l-4.24-4.24M7.76 16.24l4.24-4.24"
+              stroke="white"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
           </svg>
           Settings
         </button>

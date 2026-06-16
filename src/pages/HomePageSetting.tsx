@@ -9,10 +9,7 @@ export default function HomePageSetting() {
         <header className="hps-header">
           <div className="hps-header-left">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="hps-gear-icon">
-              <path
-                d="M12 15.5A3.5 3.5 0 1 0 12 8.5a3.5 3.5 0 0 0 0 7Z"
-                fill="white"
-              />
+              <path d="M12 15.5A3.5 3.5 0 1 0 12 8.5a3.5 3.5 0 0 0 0 7Z" fill="white" />
               <path
                 d="M19.43 12.98c.04-.32.07-.66.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65A.488.488 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.08.73 1.69.98l.38 2.65c.05.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65ZM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7Z"
                 fill="white"
@@ -56,7 +53,13 @@ export default function HomePageSetting() {
             <div className="hps-select">
               <span>Indonesia</span>
               <svg width="10" height="10" viewBox="0 0 24 24" fill="none">
-                <path d="M6 9l6 6 6-6" stroke="#2B2B2B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path
+                  d="M6 9l6 6 6-6"
+                  stroke="#2B2B2B"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
               </svg>
             </div>
           </div>
@@ -67,7 +70,13 @@ export default function HomePageSetting() {
             <div className="hps-select">
               <span>Rupiah (IDR)</span>
               <svg width="10" height="10" viewBox="0 0 24 24" fill="none">
-                <path d="M6 9l6 6 6-6" stroke="#2B2B2B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path
+                  d="M6 9l6 6 6-6"
+                  stroke="#2B2B2B"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
               </svg>
             </div>
           </div>
