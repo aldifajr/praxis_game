@@ -1,4 +1,5 @@
 import { Link, Navigate, Route, Routes } from 'react-router-dom';
+import CreateRoomPrepareEmpty from './pages/CreateRoomPrepareEmpty';
 
 type ScreenDefinition = {
   path: string;
@@ -88,6 +89,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/start/create-room/prepare-empty" element={<CreateRoomPrepareEmpty />} />
       {screens.map((screen) => (
         <Route key={screen.path} path={screen.path} element={<ScreenPlaceholder screen={screen} />} />
       ))}
