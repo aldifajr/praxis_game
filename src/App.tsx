@@ -1,4 +1,5 @@
 import { Link, Navigate, Route, Routes } from 'react-router-dom';
+import WelcomeScreenPage from './pages/WelcomeScreen';
 
 type ScreenDefinition = {
   path: string;
