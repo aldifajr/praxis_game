@@ -1,5 +1,7 @@
 import { Link, Navigate, Route, Routes } from 'react-router-dom';
 import HomePageSetting from './pages/HomePageSetting';
+import InvitationPage from './pages/InvitationPage';
+import JoinRequestPage from './pages/JoinRequestPage';
 
 type ScreenDefinition = {
   path: string;
@@ -90,7 +92,9 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/home/settings" element={<HomePageSetting />} />
-      {screens.filter(s => s.path !== '/home/settings').map((screen) => (
+      <Route path="/invitation" element={<InvitationPage />} />
+      <Route path="/join-request" element={<JoinRequestPage />} />
+      {screens.filter(s => s.path !== '/home/settings' && s.path !== '/invitation' && s.path !== '/join-request').map((screen) => (
         <Route key={screen.path} path={screen.path} element={<ScreenPlaceholder screen={screen} />} />
       ))}
       <Route path="*" element={<Navigate to="/" replace />} />
