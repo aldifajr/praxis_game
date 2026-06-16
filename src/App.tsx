@@ -1,5 +1,6 @@
 import { Link, Navigate, Route, Routes } from 'react-router-dom';
 import WelcomeScreenPage from './pages/WelcomeScreen';
+import CreateRoomPrepareEmpty from './pages/CreateRoomPrepareEmpty';
 
 type ScreenDefinition = {
   path: string;
@@ -90,7 +91,10 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/welcome" element={<WelcomeScreenPage />} />
-      {screens.filter((s) => s.path !== '/welcome').map((screen) => (
+      <Route path="/start/create-room/prepare-empty" element={<CreateRoomPrepareEmpty />} />
+      {screens
+        .filter((s) => s.path !== '/welcome' && s.path !== '/start/create-room/prepare-empty')
+        .map((screen) => (
         <Route key={screen.path} path={screen.path} element={<ScreenPlaceholder screen={screen} />} />
       ))}
       <Route path="*" element={<Navigate to="/" replace />} />
