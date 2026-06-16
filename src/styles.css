@@ -658,3 +658,401 @@ dd {
     transform: scale(0.9);
   }
 }
+
+/* Create Room Prepare Page */
+.crp-shell {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 24px;
+  background: #f7f3ef;
+}
+
+.crp-card {
+  width: 100%;
+  max-width: 611px;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.crp-header {
+  height: 48px;
+  background: #FF1934;
+  display: flex;
+  align-items: center;
+  padding: 0 8px 0 8px;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.crp-header-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.crp-header-title {
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.crp-close-btn {
+  margin-left: auto;
+}
+
+/* Body: two-panel layout */
+.crp-body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+/* Left panel */
+.crp-left {
+  flex: 0 0 58.6%;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* Tabs / breadcrumb row */
+.crp-tabs-row {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  flex-shrink: 0;
+  border-bottom: 1px solid #F1F1F1;
+  position: relative;
+  overflow: hidden;
+}
+
+.crp-tab-active {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 12px;
+  height: 100%;
+  background: white;
+  border-right: 1px solid #F1F1F1;
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: #2B2B2B;
+}
+
+.crp-tab-rest {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  font-size: 11px;
+  color: #888;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.crp-tab-fade {
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  flex: 1;
+  mask-image: linear-gradient(to right, #000 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, #000 60%, transparent 100%);
+}
+
+/* Room info */
+.crp-room-info {
+  padding: 8px 12px 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.crp-room-name-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.crp-room-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #2B2B2B;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.crp-host-badge {
+  background: #FF1934;
+  color: white;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  padding: 2px 6px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.crp-action-icons {
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.crp-icon-btn {
+  background: none;
+  border: none;
+  padding: 1px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.crp-code-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.crp-code-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  height: 12px;
+  background: #CCCCCC;
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.crp-code-text {
+  font-size: 9px;
+  font-weight: 600;
+  color: #555;
+  padding: 0 4px;
+  white-space: nowrap;
+}
+
+.crp-code-fade-overlay {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  background: linear-gradient(to right, transparent, #CCCCCC);
+}
+
+.crp-copy-pill {
+  background: #DA011C;
+  color: white;
+  border: 1px solid white;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 2px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Player cards */
+.crp-players-row {
+  display: flex;
+  gap: 8px;
+  padding: 6px 12px;
+  flex-shrink: 0;
+}
+
+.crp-player-card {
+  flex: 1;
+  height: 50px;
+  background: #F1F1F1;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.crp-player-host {
+  border: 1.5px solid #FF1934;
+}
+
+.crp-player-empty {
+  border: none;
+}
+
+.crp-player-label {
+  font-size: 9px;
+  font-weight: 600;
+  color: #2B2B2B;
+}
+
+/* Bottom area */
+.crp-left-bottom {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+}
+
+.crp-start-btn {
+  background: #FF1934;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+/* Divider */
+.crp-divider {
+  width: 1px;
+  background: #EEEEEE;
+  flex-shrink: 0;
+}
+
+/* Right panel */
+.crp-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.crp-friends-header {
+  padding: 10px 12px 6px;
+  border-bottom: 1px solid #F1F1F1;
+  flex-shrink: 0;
+}
+
+.crp-friends-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #2B2B2B;
+  letter-spacing: 0.02em;
+}
+
+.crp-friends-list {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.crp-friend-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 26px;
+  padding: 0 8px;
+  border-bottom: 1px solid #F9F9F9;
+}
+
+.crp-friend-avatar {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #F1F1F1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.crp-friend-name {
+  font-size: 10px;
+  font-weight: 500;
+  color: #2B2B2B;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.crp-invite-btn {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: 7px;
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.crp-invite-online {
+  border: 0.5px solid #008C1E;
+  color: #008C1E;
+}
+
+.crp-invite-offline {
+  border: 0.5px solid #CCCCCC;
+  color: #CCCCCC;
+  cursor: default;
+}
+
+.crp-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.crp-dot-online {
+  background: #008C1E;
+}
+
+.crp-dot-offline {
+  background: #CCCCCC;
+}
+
+@media (max-width: 640px) {
+  .crp-card {
+    max-width: 100%;
+  }
+
+  .crp-players-row {
+    gap: 5px;
+    padding: 4px 8px;
+  }
+
+  .crp-friend-row {
+    padding: 0 6px;
+    gap: 4px;
+  }
+
+  .crp-room-info {
+    padding: 6px 8px 4px;
+  }
+}

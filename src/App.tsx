@@ -3,6 +3,7 @@ import LeaderboardServerPage from './pages/LeaderboardServerPage';
 import LoadingGamePage from "./pages/LoadingGamePage";
 import JoinRoomPreparePage from "./pages/JoinRoomPreparePage";
 import LeaderboardServerEmptyPage from './pages/LeaderboardServerEmptyPage';
+import CreateRoomPreparePage from './pages/CreateRoomPreparePage';
 
 type ScreenDefinition = {
   path: string;
@@ -98,6 +99,7 @@ export default function App() {
             screen.path === "/start/join-room/prepare" ? <JoinRoomPreparePage /> :
             screen.path === "/leaderboard/server" ? <LeaderboardServerPage /> :
             screen.path === "/leaderboard/server-empty" ? <LeaderboardServerEmptyPage /> :
+            screen.path === "/start/create-room/prepare" ? <CreateRoomPreparePage /> :
             <ScreenPlaceholder screen={screen} />
           } />
       ))}
