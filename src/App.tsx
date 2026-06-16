@@ -8,6 +8,7 @@ import LeaderboardServerPage from './pages/LeaderboardServerPage';
 import LoadingGamePage from "./pages/LoadingGamePage";
 import JoinRoomPreparePage from "./pages/JoinRoomPreparePage";
 import LeaderboardServerEmptyPage from './pages/LeaderboardServerEmptyPage';
+import CreateRoomPreparePage from './pages/CreateRoomPreparePage';
 
 type ScreenDefinition = {
   path: string;
@@ -99,6 +100,7 @@ export default function App() {
       <Route path="/" element={<Home />} />
       <Route path="/welcome" element={<WelcomeScreenPage />} />
       <Route path="/start/create-room/prepare-empty" element={<CreateRoomPrepareEmpty />} />
+      <Route path="/start/create-room/prepare" element={<CreateRoomPreparePage />} />
       <Route path="/board-game/menu-v2" element={<BoardGameMenuV2 />} />
       <Route path="/home/settings" element={<HomePageSetting />} />
       <Route path="/join-request" element={<JoinRequestPage />} />
@@ -111,6 +113,7 @@ export default function App() {
           (s) =>
             s.path !== '/welcome' &&
             s.path !== '/start/create-room/prepare-empty' &&
+            s.path !== '/start/create-room/prepare' &&
             s.path !== '/board-game/menu-v2' &&
             s.path !== '/home/settings' &&
             s.path !== '/join-request' &&
