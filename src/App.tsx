@@ -1,5 +1,6 @@
 import { Link, Navigate, Route, Routes } from 'react-router-dom';
 import LeaderboardServerPage from './pages/LeaderboardServerPage';
+import LoadingGamePage from "./pages/LoadingGamePage";
 import LeaderboardServerEmptyPage from './pages/LeaderboardServerEmptyPage';
 
 type ScreenDefinition = {
@@ -92,6 +93,7 @@ export default function App() {
       <Route path="/" element={<Home />} />
       {screens.map((screen) => (
         <Route key={screen.path} path={screen.path} element={
+            screen.path === "/loading-game" ? <LoadingGamePage /> :
             screen.path === "/leaderboard/server" ? <LeaderboardServerPage /> :
             screen.path === "/leaderboard/server-empty" ? <LeaderboardServerEmptyPage /> :
             <ScreenPlaceholder screen={screen} />

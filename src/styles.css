@@ -486,3 +486,78 @@ dd {
   border-color: #FF1934;
   color: white;
 }
+
+/* Loading Game Page */
+.loading-game-shell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background: #DA011C;
+  position: relative;
+  padding: 24px;
+}
+
+.loading-game-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  justify-content: center;
+}
+
+.loading-game-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-game-logo svg {
+  width: clamp(160px, 40vw, 220px);
+  height: auto;
+}
+
+.loading-game-subtitle {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: clamp(14px, 3vw, 18px);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin: 0;
+  text-align: center;
+}
+
+.loading-game-progress-wrap {
+  width: 100%;
+  max-width: 520px;
+  padding: 0 24px 40px;
+}
+
+.loading-game-progress-track {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.loading-game-progress-fill {
+  width: 60%;
+  height: 100%;
+  background: white;
+  border-radius: 999px;
+  animation: loadingPulse 2s ease-in-out infinite;
+}
+
+@keyframes loadingPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@media (max-width: 640px) {
+  .loading-game-progress-wrap {
+    padding: 0 16px 32px;
+  }
+}
