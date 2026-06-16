@@ -1,0 +1,146 @@
+.shell {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: var(--space-6);
+  background: var(--color-bg);
+}
+
+.artboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: min(812px, 100%);
+  aspect-ratio: 812 / 375;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-floating);
+  background: var(--color-surface);
+}
+
+/* Left brand panel */
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-6);
+  background: var(--color-brand-red);
+  color: var(--color-white);
+  padding: var(--space-8);
+  position: relative;
+}
+
+.brandContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.logo {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.16);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.brandTitle {
+  margin: var(--space-4) 0 0;
+  font-size: 2.4rem;
+  letter-spacing: -0.04em;
+}
+
+.brandTagline {
+  margin: var(--space-2) 0 0;
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+
+.socialRow {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.socialIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.16);
+}
+
+/* Right OTP panel */
+.panel {
+  display: grid;
+  place-items: center;
+  padding: var(--space-8);
+}
+
+.card {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--color-text);
+}
+
+.cardCopy {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.otpRow {
+  display: flex;
+  gap: var(--space-2);
+  margin: var(--space-2) 0;
+}
+
+.otpCell {
+  flex: 1;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--color-grey-200);
+  border-radius: var(--radius-md);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.otpCellFilled {
+  border-color: var(--color-brand-red);
+}
+
+.resend {
+  margin: var(--space-1) 0 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.resendLink {
+  color: var(--color-brand-red);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .artboard {
+    grid-template-columns: 1fr;
+    aspect-ratio: auto;
+  }
+}
