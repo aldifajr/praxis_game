@@ -1,0 +1,20 @@
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  border-radius: var(--radius-pill);
+  transition: opacity 120ms ease;
+}
+
+.iconButton:hover {
+  opacity: 0.8;
+}
+
+.iconButton:active {
+  transform: translateY(1px);
+}

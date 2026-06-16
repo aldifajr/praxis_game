@@ -1,0 +1,187 @@
+/* Global reset, typography, and the dev "screen queue" home page styling. */
+:root {
+  color: var(--color-text-strong);
+  background: var(--color-bg);
+  font-family: var(--font-sans);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+code {
+  border-radius: var(--radius-pill);
+  background: var(--color-brand-red-soft);
+  color: var(--color-brand-red);
+  font-size: 0.82rem;
+  padding: 0.22rem 0.55rem;
+}
+
+.app-shell {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.hero-panel,
+.placeholder-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, var(--color-white) 0%, var(--color-cream) 100%);
+  box-shadow: var(--shadow-floating);
+}
+
+.hero-panel {
+  padding: clamp(28px, 6vw, 64px);
+}
+
+.eyebrow,
+.issue-pill {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  border-radius: var(--radius-pill);
+  background: var(--color-brand-red);
+  color: var(--color-white);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0.4rem 0.75rem;
+  text-transform: uppercase;
+}
+
+.hero-panel h1,
+.placeholder-card h1 {
+  margin: 1rem 0 0;
+  color: var(--color-text-strong);
+  font-size: clamp(2.4rem, 7vw, 5.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.07em;
+}
+
+.hero-copy {
+  max-width: 720px;
+  margin: 1.25rem 0 0;
+  color: rgba(35, 31, 32, 0.7);
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  line-height: 1.55;
+}
+
+.screen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.screen-card {
+  min-height: 190px;
+  border: 1px solid var(--color-border);
+  border-radius: 22px;
+  background: var(--color-white);
+  padding: 20px;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.screen-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 30, 57, 0.3);
+  box-shadow: 0 18px 50px rgba(35, 31, 32, 0.1);
+}
+
+.screen-card h2 {
+  margin: 1rem 0 0.5rem;
+  color: var(--color-text-strong);
+  font-size: 1.15rem;
+  line-height: 1.15;
+}
+
+.screen-card p {
+  margin: 0 0 1rem;
+  color: var(--color-text-muted);
+}
+
+.preview-page {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 32px;
+}
+
+.back-link {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  color: var(--color-brand-red);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.placeholder-card {
+  width: min(760px, 100%);
+  padding: clamp(24px, 5vw, 48px);
+}
+
+.placeholder-card h1 {
+  font-size: clamp(2rem, 6vw, 4.8rem);
+}
+
+dl {
+  display: grid;
+  gap: 16px;
+  margin: 32px 0 0;
+}
+
+dl > div {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.35fr) 1fr;
+  gap: 12px;
+  border-top: 1px solid var(--color-border);
+  padding-top: 16px;
+}
+
+dt {
+  color: rgba(35, 31, 32, 0.55);
+  font-weight: 800;
+}
+
+dd {
+  margin: 0;
+  color: var(--color-text-strong);
+}
+
+.implementation-note {
+  border-radius: 18px;
+  background: var(--color-brand-red-soft);
+  color: rgba(35, 31, 32, 0.72);
+  line-height: 1.55;
+  margin: 28px 0 0;
+  padding: 18px;
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    padding: 24px 0;
+  }
+
+  dl > div {
+    grid-template-columns: 1fr;
+  }
+}
