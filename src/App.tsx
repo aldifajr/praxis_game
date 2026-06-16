@@ -1,4 +1,5 @@
 import { Link, Navigate, Route, Routes } from 'react-router-dom';
+import LeaderboardServerPage from './pages/LeaderboardServerPage';
 
 type ScreenDefinition = {
   path: string;
@@ -89,7 +90,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       {screens.map((screen) => (
-        <Route key={screen.path} path={screen.path} element={<ScreenPlaceholder screen={screen} />} />
+        <Route key={screen.path} path={screen.path} element={screen.path === "/leaderboard/server" ? <LeaderboardServerPage /> : <ScreenPlaceholder screen={screen} />} />
       ))}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
