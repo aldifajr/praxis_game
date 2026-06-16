@@ -1,4 +1,5 @@
 import { Link, Navigate, Route, Routes } from 'react-router-dom';
+import HomePageSetting from './pages/HomePageSetting';
 
 type ScreenDefinition = {
   path: string;
@@ -88,7 +89,8 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      {screens.map((screen) => (
+      <Route path="/home/settings" element={<HomePageSetting />} />
+      {screens.filter(s => s.path !== '/home/settings').map((screen) => (
         <Route key={screen.path} path={screen.path} element={<ScreenPlaceholder screen={screen} />} />
       ))}
       <Route path="*" element={<Navigate to="/" replace />} />
