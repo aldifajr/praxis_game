@@ -20,7 +20,7 @@ export default function HomePageSetting() {
             </svg>
             <span className="hps-header-title">Pengaturan</span>
           </div>
-          <button className="hps-close-btn" aria-label="Close" onClick={() => navigate(-1)}>
+          <button className="hps-close-btn" aria-label="Close" onClick={() => navigate('/')}>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
               <path d="M18 6L6 18M6 6l12 12" stroke="white" strokeWidth="2" strokeLinecap="round" />
             </svg>
@@ -28,6 +28,7 @@ export default function HomePageSetting() {
         </header>
 
         <div className="hps-body">
+          {/* Audio slider */}
           <div className="hps-row">
             <span className="hps-label">Audio</span>
             <div className="hps-slider-wrap">
@@ -38,6 +39,7 @@ export default function HomePageSetting() {
             </div>
           </div>
 
+          {/* Musik slider */}
           <div className="hps-row">
             <span className="hps-label">Musik</span>
             <div className="hps-slider-wrap">
@@ -48,6 +50,7 @@ export default function HomePageSetting() {
             </div>
           </div>
 
+          {/* Bahasa dropdown */}
           <div className="hps-row hps-dropdown">
             <span className="hps-label">Bahasa</span>
             <div className="hps-select">
@@ -58,6 +61,7 @@ export default function HomePageSetting() {
             </div>
           </div>
 
+          {/* Mata Uang dropdown */}
           <div className="hps-row hps-dropdown">
             <span className="hps-label">Mata Uang</span>
             <div className="hps-select">
@@ -70,6 +74,7 @@ export default function HomePageSetting() {
 
           <div className="hps-divider" />
 
+          {/* Consent checkboxes */}
           <div className="hps-row hps-checkbox">
             <div className="hps-check-box checked" />
             <span className="hps-check-label">Beri saya info terbaru</span>
@@ -85,6 +90,7 @@ export default function HomePageSetting() {
 
           <div className="hps-divider" />
 
+          {/* Partner logo area */}
           <div className="hps-partner">
             <div className="hps-partner-logo" />
           </div>
