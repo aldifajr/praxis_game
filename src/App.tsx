@@ -2,6 +2,7 @@ import { Link, Navigate, Route, Routes } from 'react-router-dom';
 import WelcomeScreenPage from './pages/WelcomeScreen';
 import CreateRoomPrepareEmpty from './pages/CreateRoomPrepareEmpty';
 import BoardGameMenuV2 from './pages/BoardGameMenuV2';
+import HomePageSetting from './pages/HomePageSetting';
 
 type ScreenDefinition = {
   path: string;
@@ -94,12 +95,14 @@ export default function App() {
       <Route path="/welcome" element={<WelcomeScreenPage />} />
       <Route path="/start/create-room/prepare-empty" element={<CreateRoomPrepareEmpty />} />
       <Route path="/board-game/menu-v2" element={<BoardGameMenuV2 />} />
+      <Route path="/home/settings" element={<HomePageSetting />} />
       {screens
         .filter(
           (s) =>
             s.path !== '/welcome' &&
             s.path !== '/start/create-room/prepare-empty' &&
-            s.path !== '/board-game/menu-v2',
+            s.path !== '/board-game/menu-v2' &&
+            s.path !== '/home/settings',
         )
         .map((screen) => (
           <Route key={screen.path} path={screen.path} element={<ScreenPlaceholder screen={screen} />} />

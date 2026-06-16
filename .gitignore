@@ -28,6 +28,9 @@ pnpm-debug.log*
 # TypeScript
 *.tsbuildinfo
 
+# Internal worker/agent state
+.hermes-worker-state.json
+
 # Legacy Flutter/Dart artifacts intentionally not used in this React project
 .dart_tool/
 .flutter-plugins
