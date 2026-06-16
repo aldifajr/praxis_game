@@ -201,13 +201,14 @@ dd {
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
   display: grid;
   grid-template-columns: 1fr 231px;
-  grid-template-rows: auto auto auto auto 1fr;
+  grid-template-rows: auto auto auto auto 1fr auto;
   grid-template-areas:
     "header header"
     "room   room"
     "share  share"
     "prog   prog"
-    "players friends";
+    "players friends"
+    "start   friends";
   min-height: 288px;
 }
 
@@ -220,6 +221,7 @@ dd {
       "share"
       "prog"
       "players"
+      "start"
       "friends";
   }
 }

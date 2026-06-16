@@ -90,7 +90,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/start/create-room/prepare-empty" element={<CreateRoomPrepareEmpty />} />
-      {screens.map((screen) => (
+      {screens.filter((s) => s.path !== '/start/create-room/prepare-empty').map((screen) => (
         <Route key={screen.path} path={screen.path} element={<ScreenPlaceholder screen={screen} />} />
       ))}
       <Route path="*" element={<Navigate to="/" replace />} />
