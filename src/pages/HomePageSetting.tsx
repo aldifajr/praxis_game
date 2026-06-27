@@ -1,11 +1,12 @@
 import { useNavigate } from 'react-router-dom';
+import { ModalFrame } from '../components/layout';
 import { ChevronDownIcon, CloseIcon, GearIcon } from '../components/icons';
 
 export default function HomePageSetting() {
   const navigate = useNavigate();
 
   return (
-    <div className="hps-shell">
+    <ModalFrame>
       <div className="hps-card">
         <header className="hps-header">
           <div className="hps-header-left">
@@ -82,6 +83,6 @@ export default function HomePageSetting() {
           </div>
         </div>
       </div>
-    </div>
+    </ModalFrame>
   );
 }

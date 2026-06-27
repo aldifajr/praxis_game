@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { ModalFrame } from '../components/layout';
 import { Button, IconButton } from '../components/ui';
 import { BackIcon } from '../components/icons';
 import styles from './StartJoinRoomPage.module.css';
@@ -11,7 +12,7 @@ export default function StartJoinRoomPage() {
   const navigate = useNavigate();
 
   return (
-    <div className={styles.shell}>
+    <ModalFrame>
       <div className={styles.card}>
         <header className={styles.header}>
           <IconButton label="Back" onClick={() => navigate('/')}>
@@ -65,6 +66,6 @@ export default function StartJoinRoomPage() {
           </section>
         </div>
       </div>
-    </div>
+    </ModalFrame>
   );
 }

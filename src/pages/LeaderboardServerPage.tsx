@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { ModalFrame } from '../components/layout';
 import {
   AvatarIcon,
   ChartIcon,
@@ -55,7 +56,7 @@ export default function LeaderboardServerPage() {
   const navigate = useNavigate();
 
   return (
-    <div className="lb-shell">
+    <ModalFrame>
       <div className="lb-card">
         {/* Header */}
         <header className="lb-header">
@@ -133,6 +134,6 @@ export default function LeaderboardServerPage() {
           </div>
         </div>
       </div>
-    </div>
+    </ModalFrame>
   );
 }

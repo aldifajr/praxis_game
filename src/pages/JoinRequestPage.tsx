@@ -1,11 +1,12 @@
 import { useNavigate } from 'react-router-dom';
+import { ModalFrame } from '../components/layout';
 import { AvatarIcon, UserIcon } from '../components/icons';
 
 export default function JoinRequestPage() {
   const navigate = useNavigate();
 
   return (
-    <div className="jr-shell">
+    <ModalFrame>
       <div className="jr-card">
         <header className="jr-header">
           <UserIcon size={24} color="var(--color-white)" />
@@ -41,6 +42,6 @@ export default function JoinRequestPage() {
           </button>
         </div>
       </div>
-    </div>
+    </ModalFrame>
   );
 }

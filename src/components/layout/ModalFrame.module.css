@@ -1,0 +1,7 @@
+.region {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  /* Constrained by --modal-max-width when provided via the maxWidth prop. */
+  max-width: var(--modal-max-width, none);
+}

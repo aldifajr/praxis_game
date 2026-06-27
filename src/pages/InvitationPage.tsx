@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { Avatar, Button, ModalCard } from '../components/ui';
+import { ModalFrame } from '../components/layout';
 import { PlayIcon } from '../components/icons';
 import styles from './InvitationPage.module.css';
 
@@ -11,7 +12,7 @@ export default function InvitationPage() {
   const navigate = useNavigate();
 
   return (
-    <div className={styles.shell}>
+    <ModalFrame>
       <ModalCard
         title="Invitation"
         width={216}
@@ -32,6 +33,6 @@ export default function InvitationPage() {
           </Button>
         </div>
       </ModalCard>
-    </div>
+    </ModalFrame>
   );
 }

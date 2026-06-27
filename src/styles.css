@@ -1,8 +1,7 @@
-/* Welcome Screen */
+/* Welcome Screen — viewport + red backdrop provided by <GameFrame fill>. */
 .welcome-screen {
-  width: 100vw;
-  height: 100vh;
-  background: var(--color-brand-red-dark);
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -375,6 +374,8 @@
 }
 
 /* ===== Board Game Menu V2 ===== */
+/* Fills the landscape fullscreen artboard provided by <BoardFrame fullscreen>;
+   geometry (viewport sizing, safe-area padding) lives on the artboard. */
 .bgmv2-shell {
   --bgmv2-red: var(--color-brand-red);
   --bgmv2-dark-red: var(--color-brand-red-dark);
@@ -384,16 +385,14 @@
   --bgmv2-gray: var(--color-grey-100);
   --bgmv2-white: var(--color-white);
   --bgmv2-board-bg: #e8e8e8;
+  flex: 1;
   width: 100%;
-  max-width: 812px;
-  margin: 0 auto;
+  min-height: 0;
   background: var(--bgmv2-white);
-  min-height: 375px;
   display: flex;
   flex-direction: column;
   font-family: Inter, ui-sans-serif, system-ui, sans-serif;
   overflow: hidden;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
 }
 
 /* Top bar */
@@ -868,16 +867,7 @@
   }
 }
 
-/* Home Page Setting (issue #12) */
-.hps-shell {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 16px;
-  background: #d3d3d3;
-}
-
+/* Home Page Setting (issue #12) — centered via <ModalFrame>. */
 .hps-card {
   width: 100%;
   max-width: 392px;
@@ -1050,16 +1040,7 @@
   border-radius: 4px;
 }
 
-/* Join Request Page (issue #10) */
-.jr-shell {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 16px;
-  background: #d3d3d3;
-}
-
+/* Join Request Page (issue #10) — centered via <ModalFrame>. */
 .jr-card {
   width: 100%;
   max-width: 216px;
@@ -1159,15 +1140,7 @@
   cursor: pointer;
 }
 
-/* Leaderboard Server Page */
-.lb-shell {
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
-  padding: 24px;
-  background: var(--color-bg);
-}
-
+/* Leaderboard Server Page — centered via <ModalFrame>. */
 .lb-card {
   width: 100%;
   max-width: 508px;
@@ -1467,7 +1440,7 @@
   color: white;
 }
 
-/* Loading Game Page */
+/* Loading Game Page — viewport + red backdrop provided by <GameFrame fill>. */
 .loading-game-shell {
   display: flex;
   flex-direction: column;
@@ -1475,7 +1448,6 @@
   justify-content: center;
   min-height: 100vh;
   width: 100%;
-  background: var(--color-brand-red-dark);
   position: relative;
   padding: 24px;
 }
@@ -1547,15 +1519,7 @@
   }
 }
 
-/* Join Room Prepare Page */
-.join-prepare-shell {
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
-  padding: 24px;
-  background: var(--color-bg);
-}
-
+/* Join Room Prepare Page — centered via <ModalFrame>. */
 .join-prepare-card {
   width: 216px;
   height: 172px;
@@ -1644,15 +1608,7 @@
   }
 }
 
-/* Create Room Prepare Page */
-.crp-shell {
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
-  padding: 24px;
-  background: var(--color-bg);
-}
-
+/* Create Room Prepare Page — centered via <ModalFrame>. */
 .crp-card {
   width: 100%;
   max-width: 611px;

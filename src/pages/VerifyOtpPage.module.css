@@ -1,11 +1,3 @@
-.shell {
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
-  padding: var(--space-6);
-  background: var(--color-bg);
-}
-
 .artboard {
   display: grid;
   grid-template-columns: 1fr 1fr;

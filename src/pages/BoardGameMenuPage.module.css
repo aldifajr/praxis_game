@@ -1,21 +1,10 @@
-.shell {
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
-  padding: var(--space-5);
-  background: var(--color-bg);
-}
-
+/* Geometry (fullscreen fill, safe-area padding, radius, shadow) is provided by
+   <BoardFrame fullscreen>; only the board-specific surface tint and base font
+   scale live here. Type scales with the (now fullscreen) viewport width so the
+   board reads comfortably on a phone and on a large desktop alike. */
 .artboard {
-  display: flex;
-  flex-direction: column;
-  width: min(812px, 100%);
-  aspect-ratio: 812 / 375;
   background: var(--color-cream);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-floating);
-  overflow: hidden;
-  font-size: 0.7rem;
+  font-size: clamp(0.7rem, 0.55rem + 0.7vw, 1.05rem);
 }
 
 /* Top bar */
@@ -326,14 +315,18 @@
   color: var(--color-white);
 }
 
+/*
+ * Narrow viewports (portrait phones reach this via the rotate prompt; small
+ * windows reflow gracefully): stack the three columns so nothing is cropped.
+ */
 @media (max-width: 720px) {
   .artboard {
-    aspect-ratio: auto;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
 
   .main {
     grid-template-columns: 1fr;
+    overflow-y: auto;
   }
 
   .board {
