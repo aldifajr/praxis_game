@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { ModalFrame } from '../components/layout';
 import { BackIcon, PlayIcon, PlusCircleIcon } from '../components/icons';
 
 /** Person bust used for the room icon and host avatar in this lobby. */
@@ -17,138 +18,143 @@ export default function CreateRoomPrepareEmpty() {
   const navigate = useNavigate();
 
   return (
-    <div className="crpe-shell">
-      {/* Header */}
-      <header className="crpe-header">
-        <button className="crpe-header-btn" aria-label="Back" onClick={() => navigate(-1)}>
-          <BackIcon />
-        </button>
-        <div className="crpe-header-title">Create Room</div>
-        <button className="crpe-header-btn" aria-label="Close" onClick={() => navigate('/')}>
-          <CloseCircleWhiteIcon />
-        </button>
-      </header>
-
-      {/* Room info panel */}
-      <section className="crpe-room-info">
-        <div className="crpe-room-icon">
-          <RoomPersonIcon />
-        </div>
-        <div className="crpe-room-text">
-          <div className="crpe-room-name">Room 1</div>
-          <div className="crpe-room-code">123456</div>
-        </div>
-      </section>
-
-      {/* Share / invite bar */}
-      <section className="crpe-share-bar">
-        <div className="crpe-share-label">Share Room Code</div>
-        <div className="crpe-share-actions">
-          <button className="crpe-share-btn" aria-label="Share">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <path
-                d="M10.1333 12H5.86667C5.84 12 5.81333 12 5.78667 11.9933C4.48667 11.9 3.5 10.86 3.5 9.57333C3.5 8.30667 4.45333 7.28 5.72667 7.16C5.82 5.56 7.18 4.28667 8.8 4.28667C10.4267 4.28667 11.7867 5.56667 11.8733 7.17333C13.12 7.31333 14.04 8.32667 14.04 9.56667C14.04 10.8867 12.98 11.9667 11.6533 12C11.6267 12 11.6 12 11.5733 12H10.1333ZM8.8 5.28667C7.72 5.28667 6.82 6.12 6.72667 7.16H7.73333C7.88667 7.16 8.01333 7.28667 8.01333 7.44C8.01333 7.59333 7.88667 7.72 7.73333 7.72H5.86667C5.22 7.72 4.5 8.33333 4.5 9.57333C4.5 10.3533 5.07333 11.02 5.82 11.1733V10.44C5.82 10.2867 5.94667 10.16 6.1 10.16C6.25333 10.16 6.38 10.2867 6.38 10.44V11.44C6.38 11.48 6.37333 11.5133 6.36667 11.5467C6.49333 11.64 6.63333 11.72 6.78667 11.78C6.81333 11.7867 6.84 11.7933 6.86667 11.7933H10.1333C10.16 11.7933 10.1867 11.7933 10.2133 11.8C10.3667 11.74 10.5067 11.66 10.6333 11.5667C10.6267 11.5333 10.62 11.5 10.62 11.46V10.44C10.62 10.2867 10.7467 10.16 10.9 10.16C11.0533 10.16 11.18 10.2867 11.18 10.44V11.1733C11.9267 11.02 12.5 10.3533 12.5 9.56667C12.5 8.62667 11.8467 7.82667 10.92 7.68C10.8467 7.66667 10.7867 7.60667 10.7733 7.53333C10.76 7.46 10.7933 7.38667 10.8533 7.34C10.9333 7.28 11 7.20667 11.0533 7.12C10.9733 6.10667 10.0533 5.28667 8.99333 5.28667H8.8Z"
-                fill="var(--color-white)"
-              />
-            </svg>
+    <ModalFrame>
+      <div className="crpe-shell">
+        {/* Header */}
+        <header className="crpe-header">
+          <button className="crpe-header-btn" aria-label="Back" onClick={() => navigate(-1)}>
+            <BackIcon />
           </button>
-          <button className="crpe-share-btn" aria-label="Copy">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <rect
-                x="5.5"
-                y="5.5"
-                width="7.5"
-                height="8.5"
-                rx="1.5"
-                stroke="var(--color-white)"
-                strokeWidth="1.3"
-              />
-              <path
-                d="M3 10.5V3.5C3 2.67 3.67 2 4.5 2H10.5"
-                stroke="var(--color-white)"
-                strokeWidth="1.3"
-                strokeLinecap="round"
-              />
-            </svg>
+          <div className="crpe-header-title">Create Room</div>
+          <button className="crpe-header-btn" aria-label="Close" onClick={() => navigate('/')}>
+            <CloseCircleWhiteIcon />
           </button>
-        </div>
-      </section>
+        </header>
 
-      {/* Progress bar */}
-      <div className="crpe-progress-track">
-        <div className="crpe-progress-fill" />
-        <div className="crpe-progress-knob" />
-      </div>
-
-      {/* Player slots */}
-      <section className="crpe-players">
-        <div className="crpe-player-slot crpe-player-slot--host">
-          <div className="crpe-player-avatar">
+        {/* Room info panel */}
+        <section className="crpe-room-info">
+          <div className="crpe-room-icon">
             <RoomPersonIcon />
           </div>
-          <div className="crpe-player-name">You</div>
+          <div className="crpe-room-text">
+            <div className="crpe-room-name">Room 1</div>
+            <div className="crpe-room-code">123456</div>
+          </div>
+        </section>
+
+        {/* Share / invite bar */}
+        <section className="crpe-share-bar">
+          <div className="crpe-share-label">Share Room Code</div>
+          <div className="crpe-share-actions">
+            <button className="crpe-share-btn" aria-label="Share">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path
+                  d="M10.1333 12H5.86667C5.84 12 5.81333 12 5.78667 11.9933C4.48667 11.9 3.5 10.86 3.5 9.57333C3.5 8.30667 4.45333 7.28 5.72667 7.16C5.82 5.56 7.18 4.28667 8.8 4.28667C10.4267 4.28667 11.7867 5.56667 11.8733 7.17333C13.12 7.31333 14.04 8.32667 14.04 9.56667C14.04 10.8867 12.98 11.9667 11.6533 12C11.6267 12 11.6 12 11.5733 12H10.1333ZM8.8 5.28667C7.72 5.28667 6.82 6.12 6.72667 7.16H7.73333C7.88667 7.16 8.01333 7.28667 8.01333 7.44C8.01333 7.59333 7.88667 7.72 7.73333 7.72H5.86667C5.22 7.72 4.5 8.33333 4.5 9.57333C4.5 10.3533 5.07333 11.02 5.82 11.1733V10.44C5.82 10.2867 5.94667 10.16 6.1 10.16C6.25333 10.16 6.38 10.2867 6.38 10.44V11.44C6.38 11.48 6.37333 11.5133 6.36667 11.5467C6.49333 11.64 6.63333 11.72 6.78667 11.78C6.81333 11.7867 6.84 11.7933 6.86667 11.7933H10.1333C10.16 11.7933 10.1867 11.7933 10.2133 11.8C10.3667 11.74 10.5067 11.66 10.6333 11.5667C10.6267 11.5333 10.62 11.5 10.62 11.46V10.44C10.62 10.2867 10.7467 10.16 10.9 10.16C11.0533 10.16 11.18 10.2867 11.18 10.44V11.1733C11.9267 11.02 12.5 10.3533 12.5 9.56667C12.5 8.62667 11.8467 7.82667 10.92 7.68C10.8467 7.66667 10.7867 7.60667 10.7733 7.53333C10.76 7.46 10.7933 7.38667 10.8533 7.34C10.9333 7.28 11 7.20667 11.0533 7.12C10.9733 6.10667 10.0533 5.28667 8.99333 5.28667H8.8Z"
+                  fill="var(--color-white)"
+                />
+              </svg>
+            </button>
+            <button className="crpe-share-btn" aria-label="Copy">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <rect
+                  x="5.5"
+                  y="5.5"
+                  width="7.5"
+                  height="8.5"
+                  rx="1.5"
+                  stroke="var(--color-white)"
+                  strokeWidth="1.3"
+                />
+                <path
+                  d="M3 10.5V3.5C3 2.67 3.67 2 4.5 2H10.5"
+                  stroke="var(--color-white)"
+                  strokeWidth="1.3"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </section>
+
+        {/* Progress bar */}
+        <div className="crpe-progress-track">
+          <div className="crpe-progress-fill" />
+          <div className="crpe-progress-knob" />
         </div>
-        {[0, 1, 2].map((i) => (
-          <div className="crpe-player-slot" key={i}>
-            <div className="crpe-player-avatar crpe-player-avatar--empty">
-              <PlusCircleIcon />
+
+        {/* Player slots */}
+        <section className="crpe-players">
+          <div className="crpe-player-slot crpe-player-slot--host">
+            <div className="crpe-player-avatar">
+              <RoomPersonIcon />
             </div>
-            <div className="crpe-player-name crpe-player-name--empty">Waiting...</div>
+            <div className="crpe-player-name">You</div>
           </div>
-        ))}
-      </section>
+          {[0, 1, 2].map((i) => (
+            <div className="crpe-player-slot" key={i}>
+              <div className="crpe-player-avatar crpe-player-avatar--empty">
+                <PlusCircleIcon />
+              </div>
+              <div className="crpe-player-name crpe-player-name--empty">Waiting...</div>
+            </div>
+          ))}
+        </section>
 
-      {/* Start button */}
-      <button className="crpe-start-btn" onClick={() => navigate('/loading-game')}>
-        <PlayIcon />
-        <span>Start</span>
-      </button>
+        {/* Start button */}
+        <button className="crpe-start-btn" onClick={() => navigate('/loading-game')}>
+          <PlayIcon />
+          <span>Start</span>
+        </button>
 
-      {/* Right panel: friends / invite */}
-      <aside className="crpe-friends-panel">
-        <div className="crpe-friends-header">Friends</div>
-        <div className="crpe-friends-empty">
-          <div className="crpe-friends-illustration">
-            <svg width="96" height="96" viewBox="0 0 96 96" fill="none" aria-hidden="true">
-              <path
-                d="M23.691 70.855V44.513L45.481 54.681L76 47.127V69.486L45.481 81.024L23.691 70.855Z"
-                fill="var(--color-brand-red-light)"
-              />
-              <path d="M23.691 44.513V70.855L45.481 81.024V54.681L23.691 44.513Z" fill="#FF5769" />
-              <path
-                d="M23.692 44.513C23.692 44.513 17.106 49.259 14.977 55.845L37.058 67.08C37.058 67.08 41.804 58.365 45.483 54.683L23.694 44.515L23.692 44.513Z"
-                fill="var(--color-brand-red-lighter)"
-              />
-              <path
-                d="M76 47.127L45.481 54.681C49.839 60.878 49.839 68.434 49.839 68.434L81.022 58.944C80.44 53.715 76 47.13 76 47.13L76 47.127Z"
-                fill="var(--color-brand-red-lighter)"
-              />
-              <path
-                d="M23.691 44.513L48.291 39.38L76 47.127L45.481 54.681L23.691 44.513Z"
-                fill="#CC5260"
-              />
-              <path
-                d="M43.641 36.281L36.669 22.337L33.763 29.309L43.641 36.281Z"
-                fill="var(--color-brand-red-lighter)"
-              />
-              <path
-                d="M47.709 32.988V14.976L52.358 20.399L47.709 32.988Z"
-                fill="var(--color-brand-red-lighter)"
-              />
-              <path
-                d="M51.195 36.281L57.395 25.63L58.749 32.02L51.195 36.281Z"
-                fill="var(--color-brand-red-lighter)"
-              />
-              <path
-                d="M48.291 39.38L23.691 44.513L45.481 54.681L48.291 53.988V39.38Z"
-                fill="#C54956"
-              />
-            </svg>
+        {/* Right panel: friends / invite */}
+        <aside className="crpe-friends-panel">
+          <div className="crpe-friends-header">Friends</div>
+          <div className="crpe-friends-empty">
+            <div className="crpe-friends-illustration">
+              <svg width="96" height="96" viewBox="0 0 96 96" fill="none" aria-hidden="true">
+                <path
+                  d="M23.691 70.855V44.513L45.481 54.681L76 47.127V69.486L45.481 81.024L23.691 70.855Z"
+                  fill="var(--color-brand-red-light)"
+                />
+                <path
+                  d="M23.691 44.513V70.855L45.481 81.024V54.681L23.691 44.513Z"
+                  fill="#FF5769"
+                />
+                <path
+                  d="M23.692 44.513C23.692 44.513 17.106 49.259 14.977 55.845L37.058 67.08C37.058 67.08 41.804 58.365 45.483 54.683L23.694 44.515L23.692 44.513Z"
+                  fill="var(--color-brand-red-lighter)"
+                />
+                <path
+                  d="M76 47.127L45.481 54.681C49.839 60.878 49.839 68.434 49.839 68.434L81.022 58.944C80.44 53.715 76 47.13 76 47.13L76 47.127Z"
+                  fill="var(--color-brand-red-lighter)"
+                />
+                <path
+                  d="M23.691 44.513L48.291 39.38L76 47.127L45.481 54.681L23.691 44.513Z"
+                  fill="#CC5260"
+                />
+                <path
+                  d="M43.641 36.281L36.669 22.337L33.763 29.309L43.641 36.281Z"
+                  fill="var(--color-brand-red-lighter)"
+                />
+                <path
+                  d="M47.709 32.988V14.976L52.358 20.399L47.709 32.988Z"
+                  fill="var(--color-brand-red-lighter)"
+                />
+                <path
+                  d="M51.195 36.281L57.395 25.63L58.749 32.02L51.195 36.281Z"
+                  fill="var(--color-brand-red-lighter)"
+                />
+                <path
+                  d="M48.291 39.38L23.691 44.513L45.481 54.681L48.291 53.988V39.38Z"
+                  fill="#C54956"
+                />
+              </svg>
+            </div>
+            <div className="crpe-friends-empty-text">No friends online</div>
           </div>
-          <div className="crpe-friends-empty-text">No friends online</div>
-        </div>
-      </aside>
-    </div>
+        </aside>
+      </div>
+    </ModalFrame>
   );
 }
 

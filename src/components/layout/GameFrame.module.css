@@ -1,0 +1,36 @@
+.shell {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: var(--space-6);
+  background: var(--frame-backdrop, var(--color-bg));
+  overflow-x: hidden;
+}
+
+/* Full-bleed variant for splash/loading style screens that own the viewport. */
+.fill {
+  padding: 0;
+}
+
+/*
+ * Landscape board/gameplay variant: own the whole viewport with no padding and
+ * a dynamic-viewport height so mobile browser chrome doesn't clip the board.
+ */
+.fullscreen {
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .shell {
+    padding: var(--space-4);
+  }
+
+  .fill,
+  .fullscreen {
+    padding: 0;
+  }
+}

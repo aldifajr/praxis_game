@@ -1,0 +1,73 @@
+/*
+ * Hidden by default. Board/gameplay screens are landscape-first, so on small
+ * screens held in portrait we cover the viewport with a rotate hint instead of
+ * squeezing the board into a tall, microscopic column.
+ */
+.prompt {
+  display: none;
+}
+
+@media (orientation: portrait) and (max-width: 768px) {
+  .prompt {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    width: 100dvw;
+    height: 100vh;
+    height: 100dvh;
+    padding: max(var(--space-6), env(safe-area-inset-top))
+      max(var(--space-6), env(safe-area-inset-right))
+      max(var(--space-6), env(safe-area-inset-bottom))
+      max(var(--space-6), env(safe-area-inset-left));
+    background: var(--color-bg);
+    color: var(--color-text);
+    text-align: center;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  max-width: 280px;
+}
+
+.icon {
+  color: var(--color-brand-red);
+  animation: rotate-hint 2.4s ease-in-out infinite;
+}
+
+.title {
+  margin: 0;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.message {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+@keyframes rotate-hint {
+  0%,
+  40% {
+    transform: rotate(0deg);
+  }
+  60%,
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icon {
+    animation: none;
+  }
+}

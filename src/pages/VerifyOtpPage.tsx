@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { GameFrame } from '../components/layout';
 import { Button } from '../components/ui';
 import { ShareIcon, SocialIcon, LinkIcon } from '../components/icons';
 import styles from './VerifyOtpPage.module.css';
@@ -13,7 +14,7 @@ export default function VerifyOtpPage() {
   const navigate = useNavigate();
 
   return (
-    <div className={styles.shell}>
+    <GameFrame>
       <div className={styles.artboard}>
         {/* Left brand panel */}
         <aside className={styles.brand}>
@@ -62,6 +63,6 @@ export default function VerifyOtpPage() {
           </div>
         </section>
       </div>
-    </div>
+    </GameFrame>
   );
 }

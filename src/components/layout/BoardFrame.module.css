@@ -1,0 +1,40 @@
+.artboard {
+  display: flex;
+  flex-direction: column;
+  width: min(var(--board-width, 812px), 100%);
+  aspect-ratio: var(--board-ratio, 812 / 375);
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-floating);
+  overflow: hidden;
+}
+
+/*
+ * Landscape fullscreen: the artboard becomes the viewport. Drop the rigid
+ * aspect ratio, width cap, radius and shadow so the board fills edge-to-edge
+ * on desktop and mobile, and inset content by the device safe areas (notch /
+ * home indicator) rather than cropping it.
+ */
+.fullscreen {
+  width: 100vw;
+  width: 100dvw;
+  height: 100vh;
+  height: 100dvh;
+  max-width: none;
+  aspect-ratio: auto;
+  border-radius: 0;
+  box-shadow: none;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
+    env(safe-area-inset-left);
+}
+
+/*
+ * Below the landscape breakpoint the rigid aspect ratio is dropped so the
+ * content can reflow vertically instead of being squeezed (per the brief:
+ * "pages may rearrange responsively; do not force a rigid fixed canvas").
+ */
+@media (max-width: 720px) {
+  .artboard {
+    aspect-ratio: auto;
+  }
+}

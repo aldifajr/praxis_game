@@ -1,3 +1,4 @@
+import { ModalFrame } from '../components/layout';
 import { BackIcon, CloseCircleIcon, LinkIcon, UserIcon } from '../components/icons';
 
 const FRIENDS: { name: string; online: boolean }[] = [
@@ -11,7 +12,7 @@ const FRIENDS: { name: string; online: boolean }[] = [
 
 export default function CreateRoomPreparePage() {
   return (
-    <div className="crp-shell">
+    <ModalFrame>
       <div className="crp-card">
         {/* Red header */}
         <div className="crp-header">
@@ -113,6 +114,6 @@ export default function CreateRoomPreparePage() {
           </div>
         </div>
       </div>
-    </div>
+    </ModalFrame>
   );
 }

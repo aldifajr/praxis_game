@@ -1,8 +1,9 @@
+import { ModalFrame } from '../components/layout';
 import { AvatarIcon, BackIcon } from '../components/icons';
 
 export default function JoinRoomPreparePage() {
   return (
-    <div className="join-prepare-shell">
+    <ModalFrame>
       <div className="join-prepare-card">
         {/* Red header */}
         <div className="join-prepare-header">
@@ -27,6 +28,6 @@ export default function JoinRoomPreparePage() {
           </div>
         </div>
       </div>
-    </div>
+    </ModalFrame>
   );
 }
